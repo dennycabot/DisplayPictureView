@@ -10,6 +10,9 @@
 		EF2EFB291E5C38F80021F01A /* DisplayPictureView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2EFB1F1E5C38F80021F01A /* DisplayPictureView.framework */; };
 		EF2EFB2E1E5C38F80021F01A /* DisplayPictureViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2EFB2D1E5C38F80021F01A /* DisplayPictureViewTests.swift */; };
 		EF2EFB301E5C38F80021F01A /* DisplayPictureView.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2EFB221E5C38F80021F01A /* DisplayPictureView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF2EFB3A1E5C39170021F01A /* DPView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF2EFB391E5C39170021F01A /* DPView.xib */; };
+		EF2EFB3C1E5C395A0021F01A /* DPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2EFB3B1E5C395A0021F01A /* DPView.swift */; };
+		EF2EFB3E1E5C39930021F01A /* DPEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2EFB3D1E5C39930021F01A /* DPEnums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		EF2EFB281E5C38F80021F01A /* DisplayPictureViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisplayPictureViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF2EFB2D1E5C38F80021F01A /* DisplayPictureViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPictureViewTests.swift; sourceTree = "<group>"; };
 		EF2EFB2F1E5C38F80021F01A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF2EFB391E5C39170021F01A /* DPView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPView.xib; sourceTree = "<group>"; };
+		EF2EFB3B1E5C395A0021F01A /* DPView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPView.swift; sourceTree = "<group>"; };
+		EF2EFB3D1E5C39930021F01A /* DPEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPEnums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,9 @@
 			isa = PBXGroup;
 			children = (
 				EF2EFB221E5C38F80021F01A /* DisplayPictureView.h */,
+				EF2EFB391E5C39170021F01A /* DPView.xib */,
+				EF2EFB3B1E5C395A0021F01A /* DPView.swift */,
+				EF2EFB3D1E5C39930021F01A /* DPEnums.swift */,
 				EF2EFB231E5C38F80021F01A /* Info.plist */,
 			);
 			path = DisplayPictureView;
@@ -149,6 +158,7 @@
 					EF2EFB1E1E5C38F80021F01A = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = DBD2DBFKN6;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					EF2EFB271E5C38F80021F01A = {
@@ -181,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF2EFB3A1E5C39170021F01A /* DPView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +209,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF2EFB3E1E5C39930021F01A /* DPEnums.swift in Sources */,
+				EF2EFB3C1E5C395A0021F01A /* DPView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +335,7 @@
 		EF2EFB341E5C38F80021F01A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = DBD2DBFKN6;
@@ -334,6 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cabot.DisplayPictureView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +356,7 @@
 		EF2EFB351E5C38F80021F01A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = DBD2DBFKN6;
@@ -360,6 +376,7 @@
 		EF2EFB371E5C38F80021F01A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = DBD2DBFKN6;
 				INFOPLIST_FILE = DisplayPictureViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +389,7 @@
 		EF2EFB381E5C38F80021F01A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = DBD2DBFKN6;
 				INFOPLIST_FILE = DisplayPictureViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
